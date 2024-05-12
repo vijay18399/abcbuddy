@@ -1,0 +1,86 @@
+[
+  {
+    "cid": 1,
+    "content": "Apple",
+    "description": "A sweet and juicy fruit that comes in red, green, and yellow colors. Apples are a great source of vitamins!",
+    "image": ""
+  },
+  {
+    "cid": 2,
+    "content": "Banana",
+    "description": "A long, curved fruit with a yellow peel and a creamy white inscide. Bananas are a good source of potassium!",
+    "image": ""
+  },
+  {
+    "cid": 3,
+    "content": "Orange",
+    "description": "A round citrus fruit with a bright orange peel and juicy, tangy segments inscide. Oranges are a good source of vitamin C!",
+    "image": ""
+  },
+  {
+    "cid": 4,
+    "content": "Ball",
+    "description": "A round object you can throw, bounce, or kick. Balls come in many sizes and colors and are fun to play with!",
+    "image": ""
+  },
+  {
+    "cid": 5,
+    "content": "Cat",
+    "description": "A furry pet with soft fur, whiskers, and a tail. Cats love to purr, play, and take naps in sunny spots!",
+    "image": ""
+  },
+  {
+    "cid": 6,
+    "content": "Dog",
+    "description": "A loyal and playful pet with fur, a wet nose, and a wagging tail. Dogs love to go for walks, play fetch, and cuddle with their humans!",
+    "image": ""
+  },
+  {
+    "cid": 7,
+    "content": "Tree",
+    "description": "A tall plant with a trunk, branches, and leaves. Trees provcide shade, clean air, and homes for many animals!",
+    "image": ""
+  },
+  {
+    "cid": 8,
+    "content": "Flower",
+    "description": "The colorful part of a plant that comes in many shapes, sizes, and smells. Flowers attract bees and butterflies that help them reproduce!",
+    "image": ""
+  },
+  {
+    "cid": 9,
+    "content": "House",
+    "description": "A building where people live. Houses come in all shapes and sizes and provcide shelter, warmth, and a place to call home!",
+    "image": ""
+  },
+  {
+    "cid": 10,
+    "content": "Car",
+    "description": "A vehicle with wheels that is used for transportation. Cars come in many colors and styles and can take you on adventures!",
+    "image": ""
+  },
+  {
+    "cid": 11,
+    "content": "Sun",
+    "description": "The giant star at the center of our solar system. The sun provcides light and warmth to Earth, allowing plants to grow and life to thrive!",
+    "image": ""
+  },
+  {
+    "cid": 12,
+    "content": "Moon",
+    "description": "Earth's natural satellite that orbits around our planet. The moon reflects sunlight, giving us light at night and causing tcides in the ocean!",
+    "image": ""
+  },
+  {
+    "cid": 13,
+    "content": "Bird",
+    "description": "A warm-blooded animal with feathers, wings, and a beak. Birds can fly and come in many different colors and sizes!",
+    "image": ""
+  },
+  {
+    "cid": 14,
+    "content": "Fish",
+    "description": "A cold-blooded animal that lives in water and has fins for swimming. Fish come in all shapes and sizes and play an important role in the ocean ecosystem!",
+    "image": ""
+  }
+]

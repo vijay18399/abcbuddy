@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Gotham Rounded Medium';
+  src: local('Gotham Rounded Medium'), url(./assets/fonts/Gotham\ Rounded\ Medium.otf) format('opentype');
+  font-weight: 500; /* Adjust the font-weight if needed */
+  font-style: normal; /* Adjust the font-style if needed */
+}
+body {
+  margin: 0;
+  font-family: 'Gotham Rounded Medium', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100svh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
