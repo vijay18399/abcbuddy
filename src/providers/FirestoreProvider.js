@@ -102,13 +102,31 @@ export const FirestoreProvider = ({ children }) => {
       throw error;
     }
   };
-  
+  const getDocumentsByCategory = async (type, category) => {
+    try {
+      const q = query(
+        collection(db, 'collections'),
+        where('type', '==', type),
+        where('category', '==', category)
+      );
+      const querySnapshot = await getDocs(q);
+      const documents = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      return documents;
+    } catch (error) {
+      console.error('Error getting documents by type and category:', error);
+      throw error;
+    }
+  };
   const firestoreOperations = {
     addDocument,
     addDocuments,
     getDocuments,
     getDocument,
     getDocumentsByQuery,
+    getDocumentsByCategory,
     updateDocument,
     deleteDocument
   };

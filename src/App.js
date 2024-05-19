@@ -1,36 +1,31 @@
-import Layout from './components/Layout';
-import NotFound from './containers/NotFound';
-import Auth from './containers/Auth';
-import Home from './containers/Home';
-import BulkUpload from './containers/BulkUpload';
-import PracticeCollection from './containers/PracticeCollection';
-import CreateList from './containers/CreateList';
-import ListPractice from './containers/ListPractice';
-import { HashRouter as BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useContext } from 'react';
-import { AuthContext } from './providers/AuthProvider';
-import PracticeCards from './components/PracticeCards';
-// Admin Components
-import AdminLayout from './components/AdminLayout';
-import Dashboard from './containers/Dashboard';
-import CollectionManager from './containers/CollectionManager';
-
+import { HashRouter as BrowserRouter, Routes, Route } from "react-router-dom";
+import {ProtectedRoute,RedirectIfAuthenticated} from './components/Auth'
+import { PractiseCards, PractiseCollection, PractiseCategories} from './components/Practise';
+import { AdminLayout, BulkUpload, CollectionManager, Dashboard } from './components/Admin';
+import { Layout,NotFound} from './components/Common';
+import Auth from './components/Auth/Auth';
+import Home from './components/Home/Home';
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="auth" element={<RedirectIfAuthenticated><Auth /></RedirectIfAuthenticated>} />
-          <Route path="practice" element={<Protected><PracticeCards /></Protected>}></Route>
-          <Route path="practice/:collectionType" element={<PracticeCollection />} />
-          <Route path="practice-list" element={<Protected><CreateList /></Protected>} />
-          <Route path="practice-list/:uniqueId" element={<Protected><ListPractice /></Protected>} />
+          <Route path="auth" element={<RedirectIfAuthenticated />}>
+            <Route path="" element={<Auth />} />
+          </Route>
+          <Route path="practise" element={<ProtectedRoute />}>
+            <Route path="" element={<PractiseCards />} />
+            <Route path=":collectionType" element={<PractiseCategories />} />
+            <Route path=":collectionType/:category" element={<PractiseCollection />} />
+          </Route>
         </Route>
-        <Route path="/dashboard" element={<AdminLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="bulk-upload" element={<BulkUpload/>} />
-          <Route path=":collectionType" element={<CollectionManager  />} />
+        <Route path="/dashboard" element={<ProtectedRoute />}>
+          <Route element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="bulk-upload" element={<BulkUpload />} />
+            <Route path=":collectionType" element={<CollectionManager />} />
+          </Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
@@ -38,22 +33,5 @@ function App() {
   );
 }
 
-// Component to redirect logged-in users away from login and signup pages
-const RedirectIfAuthenticated = ({ children }) => {
-  const { user } = useContext(AuthContext);
-  if (user) {
-    return <Navigate to="/" replace />;
-  }
-  return children;
-};
-
-// Component to protect routes from unauthenticated users
-const Protected = ({ children }) => {
-  const { user } = useContext(AuthContext);
-  if (!user) {
-    return <Navigate to="/auth" replace />;
-  }
-  return children;
-};
 
 export default App;

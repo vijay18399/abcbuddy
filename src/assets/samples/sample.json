@@ -1,86 +1,462 @@
 [
   {
-    "cid": 1,
-    "content": "Apple",
-    "description": "A sweet and juicy fruit that comes in red, green, and yellow colors. Apples are a great source of vitamins!",
-    "image": ""
+      "content": "Apple",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 2,
-    "content": "Banana",
-    "description": "A long, curved fruit with a yellow peel and a creamy white inscide. Bananas are a good source of potassium!",
-    "image": ""
+      "content": "Banana",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 3,
-    "content": "Orange",
-    "description": "A round citrus fruit with a bright orange peel and juicy, tangy segments inscide. Oranges are a good source of vitamin C!",
-    "image": ""
+      "content": "Orange",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 4,
-    "content": "Ball",
-    "description": "A round object you can throw, bounce, or kick. Balls come in many sizes and colors and are fun to play with!",
-    "image": ""
+      "content": "Grapes",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 5,
-    "content": "Cat",
-    "description": "A furry pet with soft fur, whiskers, and a tail. Cats love to purr, play, and take naps in sunny spots!",
-    "image": ""
+      "content": "Mango",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 6,
-    "content": "Dog",
-    "description": "A loyal and playful pet with fur, a wet nose, and a wagging tail. Dogs love to go for walks, play fetch, and cuddle with their humans!",
-    "image": ""
+      "content": "Strawberry",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 7,
-    "content": "Tree",
-    "description": "A tall plant with a trunk, branches, and leaves. Trees provcide shade, clean air, and homes for many animals!",
-    "image": ""
+      "content": "Pineapple",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 8,
-    "content": "Flower",
-    "description": "The colorful part of a plant that comes in many shapes, sizes, and smells. Flowers attract bees and butterflies that help them reproduce!",
-    "image": ""
+      "content": "Cherry",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 9,
-    "content": "House",
-    "description": "A building where people live. Houses come in all shapes and sizes and provcide shelter, warmth, and a place to call home!",
-    "image": ""
+      "content": "Watermelon",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 10,
-    "content": "Car",
-    "description": "A vehicle with wheels that is used for transportation. Cars come in many colors and styles and can take you on adventures!",
-    "image": ""
+      "content": "Blueberry",
+      "category": "fruits",
+      "image": ""
   },
   {
-    "cid": 11,
-    "content": "Sun",
-    "description": "The giant star at the center of our solar system. The sun provcides light and warmth to Earth, allowing plants to grow and life to thrive!",
-    "image": ""
+      "content": "Cat",
+      "category": "animals",
+      "image": ""
   },
   {
-    "cid": 12,
-    "content": "Moon",
-    "description": "Earth's natural satellite that orbits around our planet. The moon reflects sunlight, giving us light at night and causing tcides in the ocean!",
-    "image": ""
+      "content": "Dog",
+      "category": "animals",
+      "image": ""
   },
   {
-    "cid": 13,
-    "content": "Bird",
-    "description": "A warm-blooded animal with feathers, wings, and a beak. Birds can fly and come in many different colors and sizes!",
-    "image": ""
+      "content": "Elephant",
+      "category": "animals",
+      "image": ""
   },
   {
-    "cid": 14,
-    "content": "Fish",
-    "description": "A cold-blooded animal that lives in water and has fins for swimming. Fish come in all shapes and sizes and play an important role in the ocean ecosystem!",
-    "image": ""
+      "content": "Lion",
+      "category": "animals",
+      "image": ""
+  },
+  {
+      "content": "Tiger",
+      "category": "animals",
+      "image": ""
+  },
+  {
+      "content": "Horse",
+      "category": "animals",
+      "image": ""
+  },
+  {
+      "content": "Kangaroo",
+      "category": "animals",
+      "image": ""
+  },
+  {
+      "content": "Giraffe",
+      "category": "animals",
+      "image": ""
+  },
+  {
+      "content": "Zebra",
+      "category": "animals",
+      "image": ""
+  },
+  {
+      "content": "Panda",
+      "category": "animals",
+      "image": ""
+  },
+  {
+      "content": "Chair",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Table",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Sofa",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Bed",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Cupboard",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Desk",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Shelf",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Wardrobe",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Stool",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Cabinet",
+      "category": "furniture",
+      "image": ""
+  },
+  {
+      "content": "Car",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Bus",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Bike",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Truck",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Scooter",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Van",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Bicycle",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Motorcycle",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Train",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Plane",
+      "category": "vehicles",
+      "image": ""
+  },
+  {
+      "content": "Doctor",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Teacher",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Engineer",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Nurse",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Lawyer",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Artist",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Chef",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Pilot",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Farmer",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Dentist",
+      "category": "professions",
+      "image": ""
+  },
+  {
+      "content": "Circle",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Square",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Triangle",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Rectangle",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Pentagon",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Hexagon",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Octagon",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Oval",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Diamond",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Star",
+      "category": "shapes",
+      "image": ""
+  },
+  {
+      "content": "Red",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Blue",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Green",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Yellow",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Orange",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Purple",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Pink",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Brown",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Black",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "White",
+      "category": "colors",
+      "image": ""
+  },
+  {
+      "content": "Sun",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Moon",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Star",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Tree",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Flower",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "River",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Mountain",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Ocean",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Desert",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "Forest",
+      "category": "nature",
+      "image": ""
+  },
+  {
+      "content": "January",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "February",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "March",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "April",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "May",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "June",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "July",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "August",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "September",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "October",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "November",
+      "category": "months",
+      "image": ""
+  },
+  {
+      "content": "December",
+      "category": "months",
+      "image": ""
   }
 ]

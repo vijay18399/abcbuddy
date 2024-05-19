@@ -4,9 +4,14 @@ const useSpeechRecognition = () => {
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [recognition, setRecognition] = useState(null);
-
+  const [isSupported, setIsSupported] = useState(true);
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition)
+    {
+      setIsSupported(false);
+      return;
+    }
     const newRecognition = new SpeechRecognition();
     newRecognition.continuous = true;
     newRecognition.interimResults = true;
@@ -47,6 +52,7 @@ const useSpeechRecognition = () => {
   return {
     isListening,
     transcript,
+    isSupported,
     startListening,
     stopListening,
     setTranscript,
