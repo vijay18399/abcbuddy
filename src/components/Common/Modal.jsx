@@ -20,6 +20,9 @@ const ModalContent = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 90%;
+    @media only screen and (max-width: 420px) {
+        width:90%;
+    }
 `;
 
 const ModalTitle = styled.div`

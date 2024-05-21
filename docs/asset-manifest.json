@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/abcbuddy/static/css/main.b9c03667.css",
-    "main.js": "/abcbuddy/static/js/main.ff00f2df.js",
+    "main.js": "/abcbuddy/static/js/main.de41f363.js",
     "static/js/453.ee131a04.chunk.js": "/abcbuddy/static/js/453.ee131a04.chunk.js",
     "static/media/Gotham Rounded Medium.otf": "/abcbuddy/static/media/Gotham Rounded Medium.10d88929ec344e9ef796.otf",
     "static/media/great-job.mp3": "/abcbuddy/static/media/great-job.18f380f2d2641e3f6095.mp3",
@@ -11,11 +11,11 @@
     "index.html": "/abcbuddy/index.html",
     "static/media/sample.csv": "/abcbuddy/static/media/sample.a29cb86942d2363bdce6.csv",
     "main.b9c03667.css.map": "/abcbuddy/static/css/main.b9c03667.css.map",
-    "main.ff00f2df.js.map": "/abcbuddy/static/js/main.ff00f2df.js.map",
+    "main.de41f363.js.map": "/abcbuddy/static/js/main.de41f363.js.map",
     "453.ee131a04.chunk.js.map": "/abcbuddy/static/js/453.ee131a04.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b9c03667.css",
-    "static/js/main.ff00f2df.js"
+    "static/js/main.de41f363.js"
   ]
 }

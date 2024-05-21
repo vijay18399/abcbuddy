@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { MdImageNotSupported, MdModeEdit, MdDelete } from "react-icons/md";
 
 const Container = styled.div`
-  padding: 20px;
+  padding: 5px;
 `;
 
 const Header = styled.div`
@@ -14,30 +14,39 @@ const Header = styled.div`
   justify-content: space-between;
 `;
 
-const Filter = styled.select`
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+const TableWrapper = styled.div`
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
-const Table = styled.table`
+const StyledTable = styled.table`
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
 
   th, td {
-    padding: 12px 15px;
     border-bottom: 1px solid #ddd;
     text-align: left;
   }
 
   th {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     font-weight: bold;
+    color: #6a6c78;
+    padding: 8px 10px;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
   }
 
   td {
+    color: #000409;
+    padding: 0px 8px;
     button {
       padding: 6px 10px;
       background-color: #3498db;
@@ -112,7 +121,7 @@ const Pagination = styled.div`
 const PaginationButton = styled.button`
   padding: 6px 12px;
   margin: 0 5px;
-  background-color: ${props => props.active ? "#3498db" : "#ddd"};
+  background-color: ${props => props.active ? "#3498db" : "#ffffff"};
   color: ${props => props.active ? "#fff" : "#333"};
   border: none;
   border-radius: 4px;
@@ -121,6 +130,13 @@ const PaginationButton = styled.button`
   &:hover {
     background-color: ${props => props.active ? "#2980b9" : "#ccc"};
   }
+`;
+
+const Filter = styled.select`
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 `;
 
 const categories = [
@@ -149,7 +165,7 @@ const CollectionManager = () => {
     }
 
     fetchItems();
-  }, [getDocuments, collectionType, page]);
+  }, [getDocuments, collectionType, page, selectedCategory]);
 
   const getDocumentsByType = async (type) => {
     const documents = await getDocuments('collections');
@@ -210,36 +226,48 @@ const CollectionManager = () => {
       <Header>
         <h1>{collectionType.charAt(0).toUpperCase() + collectionType.slice(1)}</h1>
         <div>
+          <Filter value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
+            <option value="">Select Category</option>
+            {categories.map((category, index) => (
+              <option key={index} value={category}>{category}</option>
+            ))}
+          </Filter>
           <Button onClick={() => { setText(''); setDescription(''); setImageUrl(''); setSelectedCategory(''); setShowModal(true); }}>Add New</Button>
         </div>
       </Header>
-      <Table>
-        <thead>
-          <tr>
-            <th>Serial No</th>
-            <th>Content</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.slice((page - 1) * itemsPerPage, page * itemsPerPage).map((item, index) => (
-            <tr key={item.id}>
-              <td>{(page - 1) * itemsPerPage + index + 1}</td>
-              <td>{item.content}</td>
-              <td>{item.description}</td>
-              <td>{item.image ? <Img src={item.image} alt="Item Image" /> : <Chip><MdImageNotSupported /></Chip>}</td>
-              <td>{item.category}</td>
-              <td>
-                <Button onClick={() => handleEdit(item)}><MdModeEdit /></Button>
-                <Button onClick={() => confirmDelete(item)}><MdDelete /></Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+      {items.length > 0 ? (
+        <TableWrapper>
+          <StyledTable>
+            <thead>
+              <tr>
+                <th>Serial No</th>
+                <th>Content</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {items.slice((page - 1) * itemsPerPage, page * itemsPerPage).map((item, index) => (
+                <tr key={item.id}>
+                  <td>{(page - 1) * itemsPerPage + index + 1}</td>
+                  <td>{item.content}</td>
+                  <td>{item.description}</td>
+                  <td>{item.image ? <Img src={item.image} alt="Item Image" /> : <Chip><MdImageNotSupported /></Chip>}</td>
+                  <td>{item.category}</td>
+                  <td>
+                    <Button onClick={() => handleEdit(item)}><MdModeEdit /></Button>
+                    <Button onClick={() => confirmDelete(item)}><MdDelete /></Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </StyledTable>
+        </TableWrapper>
+      ) : (
+        <p>No items found.</p>
+      )}
       <Pagination>
         {Array.from({ length: pageCount }, (_, index) => (
           <PaginationButton key={index} active={index + 1 === page} onClick={() => handlePageChange(index + 1)}>

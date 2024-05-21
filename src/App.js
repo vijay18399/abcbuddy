@@ -20,7 +20,7 @@ function App() {
             <Route path=":collectionType/:category" element={<PractiseCollection />} />
           </Route>
         </Route>
-        <Route path="/dashboard" element={<ProtectedRoute />}>
+        <Route path="dashboard" element={<ProtectedRoute />}>
           <Route element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="bulk-upload" element={<BulkUpload />} />

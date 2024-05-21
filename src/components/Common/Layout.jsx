@@ -8,7 +8,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: calc(100svh - 61px);
+    height: calc(100svh - 61px);
     position: relative;
 `;
 const SpeakerIcon = styled.div`

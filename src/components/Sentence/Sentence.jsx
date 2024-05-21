@@ -11,11 +11,14 @@ import { useAudio } from '../../providers/AudioProvider';
 
 const SentenceContainer = styled.div`
     margin: 10px;
-    min-width: 400px;
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    @media only screen and (max-width: 420px) {
+        width:90%;
+    }
 `;
 const InstructionText = styled.div`
     color: #5C5C5C;
@@ -32,9 +35,6 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     margin-top: 12px;
     align-items: center;
-    @media only screen and (max-width: 600px) {
-        width: 90%;
-    }
 `
 const WordList = styled.ul`
     list-style: none;
@@ -50,8 +50,8 @@ const ButtonContainer = styled.div`
     margin-top: 10px;
 `
 const SpeakerIcon = styled.span`
-    font-size: 32px;
-    color: #1BAFF4;
+    font-size: 25px;
+    color: #263238;
     cursor: pointer;
 `
 const ProgressBarContainer = styled.div`

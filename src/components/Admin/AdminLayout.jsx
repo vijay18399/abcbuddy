@@ -54,7 +54,8 @@ const Divider = styled.div`
 
 const Container = styled.div`
   margin-left: 250px;
-  padding: 20px;
+  padding: 5px 10px;
+  background-color: #F0F2F5;
 `;
 
 const AdminLayout = () => {

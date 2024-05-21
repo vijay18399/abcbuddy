@@ -13,12 +13,12 @@ const ChipContainer = styled.div`
 
 const Chip = styled.div`
     position: relative;
-    background-color: #ff8c00;
+    background-color: #43A047;
     color: #ffffff;
     border-radius: 20px;
-    padding: 8px 16px;
-    padding-left: 35px;
-    margin: 0 10px 10px 0;
+    padding: 8px;
+    padding-left: 30px;
+    margin: 0 5px 5px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,8 +30,8 @@ const Chip = styled.div`
 const ChipNumber = styled.span`
     position: absolute;
     left: 2px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #E8F5E9;
+    color: #1B5E20;
     border-radius: 50%;
     width: 25px;
     height: 25px;
